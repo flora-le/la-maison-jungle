@@ -5,7 +5,8 @@ export const plantList = [
 		id: '1ed',
 		isBestSale: true,
 		light: 2,
-		water: 3
+		water: 3,
+		cover: 'monstera.jpg'
 	},
 	{
 		name: 'ficus lyrata',
