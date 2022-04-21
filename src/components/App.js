@@ -1,6 +1,6 @@
 import Banner from './Banner'
 import Cart from './Cart'
-import '../App.css';
+import '../styles/App.css';
 
 function App() {
   return (<div>
