@@ -11,12 +11,12 @@ function ShoppingList() {
     return (<div>
         <ul>
           {categoryList.map((cat, index) => (
-                <li key={cat}>{cat}</li>
+                <li key={`cat-${index}`}>{cat}</li>
             ))}
         </ul>
         <ul className='lmj-plant-list'>
           {plantList.map((plant, index) => (
-              <PlantItem name={plant.name} cover={plant.cover} id={plant.id} water={plant.water} light={plant.light} category={plant.category} isBestSale={plant.isBestSale} isSpecialOffer={plant.isSpecialOffer}/> 
+              <PlantItem key={`plant-${index}`} name={plant.name} cover={plant.cover} id={plant.id} water={plant.water} light={plant.light} category={plant.category} isBestSale={plant.isBestSale} isSpecialOffer={plant.isSpecialOffer}/> 
             ))}
         </ul>
         </div>
