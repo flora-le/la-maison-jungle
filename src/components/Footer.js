@@ -24,7 +24,7 @@ const handleBlur = (e) => checkEmail(e.target.value);
         onChange={(e) => setInputValue(e.target.value)}
         onBlur={handleBlur}
         />
-    <button onClick={() => alert(inputValue)}>Alertez moi</button>
+    <button onClick={() => alert(inputValue)}>Subscribe</button>
 			</div>
 		</footer>
 	)

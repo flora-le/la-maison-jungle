@@ -8,15 +8,16 @@ function handleClick(plantName) {
 
 function PlantItem({name, cover,id,water,light,category,isBestSale,isSpecialOffer,price }){
   return (
- <li key={id} className='lmj-plant-item'>
-               <img src={cover} alt={`${name} cover`} className="lmj-plant-item-cover" />
-                      { name }
-                      {(isBestSale || category === "classique") && <span>🔥</span>}
-                                {isSpecialOffer  && <div className='lmj-sales'>Soldes</div>}
-              <div>                  
-              <CareScale careType='water' scaleValue={water} />
-              <CareScale careType='light' scaleValue={light} />
-              </div>
+    <li key={id} className='lmj-plant-item' >
+      <span className='lmj-plant-item-price'>{price}€</span>
+      <img className="lmj-plant-item-cover" src={cover} alt={`${name} cover`} onClick={() => handleClick(name)}/>
+        { name }
+        {(isBestSale || category === "classique") && <span>🔥</span>}
+        {isSpecialOffer  && <div className='lmj-sales'>Soldes</div>}
+      <div>                  
+        <CareScale careType='water' scaleValue={water} />
+        <CareScale careType='light' scaleValue={light} />
+      </div>
     </li>
     );
 }
