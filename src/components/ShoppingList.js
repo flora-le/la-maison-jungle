@@ -5,7 +5,7 @@ import '../styles/ShoppingList.css'
 import { useState } from 'react'
 
 function ShoppingList({ cart, updateCart }) {
-	const [selectedCategory, updateSelectedCategory] = useState("all")
+	const [selectedCategory, updateSelectedCategory] = useState("")
 
 	const categories = plantList.reduce(
     (acc, plant) =>//accumulator + currentVal
@@ -27,8 +27,13 @@ function ShoppingList({ cart, updateCart }) {
 		}
 	}
 
- 	const filterCategory = plantList.filter((plant) => plant.category === selectedCategory)
-	const displayPlant = plantList.map(({ id, cover, name, water, light, price }) => (
+	return (
+		<div className='lmj-shopping-list'>
+			<Categories categories={categories} selectedCategory={selectedCategory} updateSelectedCategory={updateSelectedCategory}/>
+			<ul className='lmj-plant-list'>
+				{
+					plantList.map(({ id, cover, name, water, light, price,category }) =>
+					!selectedCategory || selectedCategory === category ? (
 						<div key={id}>
 							<PlantItem
 								key={id}
@@ -40,26 +45,8 @@ function ShoppingList({ cart, updateCart }) {
 							/>
 							<button onClick={() => addToCart(name, price)}>Ajouter</button>
 						</div>
-						))
-		
-	return (
-		<div className='lmj-shopping-list'>
-			<Categories categories={categories} selectedCategory={selectedCategory} updateSelectedCategory={updateSelectedCategory}/>
-			<ul className='lmj-plant-list'>
-				{selectedCategory === "all" ? displayPlant :
-					filterCategory.map(({ id, cover, name, water, light, price }) => (
-					<div key={id}>
-						<PlantItem
-							key={id}
-							cover={cover}
-							name={name}
-							water={water}
-							light={light}
-							price={price}
-						/>
-						<button onClick={() => addToCart(name, price)}>Ajouter</button>
-					</div>
-					))
+						) : null
+					)
 				}
 			</ul>
 		</div>

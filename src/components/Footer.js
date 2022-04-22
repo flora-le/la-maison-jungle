@@ -19,13 +19,12 @@ const handleBlur = (e) => checkEmail(e.target.value);
 			<div className='lmj-footer-elem'>
 				Pour les passionné·e·s de plantes 🌿🌱🌵
 			</div>
-			<div className='lmj-footer-elem'>Laissez-nous votre mail :
-    <input type='email' name='your_email' value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
-        onBlur={handleBlur}
-        />
-    <button onClick={() => alert(inputValue)}>Subscribe</button>
-			</div>
+			<div className='lmj-footer-elem'>Laissez-nous votre mail :</div>
+			<input className='lmj-footer-elem' type='email' name='your_email' value={inputValue}
+				onChange={(e) => setInputValue(e.target.value)}
+				onBlur={handleBlur}
+			/>
+			<button className='lmj-footer-elem' onClick={() => alert(inputValue)}>Subscribe</button>
 		</footer>
 	)
 }
