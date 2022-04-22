@@ -6,9 +6,9 @@ function handleClick(plantName) {
   alert(`Vous voulez acheter 1 ${plantName} ? Très bon choix 🌱✨`);
 }
 
-function PlantItem({name, cover,id,water,light,category,isBestSale,isSpecialOffer }){
+function PlantItem({name, cover,id,water,light,category,isBestSale,isSpecialOffer,price }){
   return (
- <li key={id} className='lmj-plant-item' onClick={() => handleClick(name)}>
+ <li key={id} className='lmj-plant-item'>
                <img src={cover} alt={`${name} cover`} className="lmj-plant-item-cover" />
                       { name }
                       {(isBestSale || category === "classique") && <span>🔥</span>}

@@ -1,26 +1,37 @@
 import { plantList } from '../datas/plantList'
-import '../styles/ShoppingList.css'
 import PlantItem from './PlantItem'
+import '../styles/ShoppingList.css'
 
-function ShoppingList() {
-  var categoryList = [];
-  plantList.forEach(p => {
-    if (!categoryList.includes(p.category)) 
-    categoryList.push(p.category)
-  });
-    return (<div>
-        <ul>
-          {categoryList.map((cat, index) => (
-                <li key={`cat-${index}`}>{cat}</li>
-            ))}
-        </ul>
-        <ul className='lmj-plant-list'>
-          {plantList.map((plant, index) => (
-              <PlantItem key={`plant-${index}`} name={plant.name} cover={plant.cover} id={plant.id} water={plant.water} light={plant.light} category={plant.category} isBestSale={plant.isBestSale} isSpecialOffer={plant.isSpecialOffer}/> 
-            ))}
-        </ul>
-        </div>
-    )
+function ShoppingList({ cart, updateCart }) {
+	const categories = plantList.reduce(
+		(acc, plant) =>
+			acc.includes(plant.category) ? acc : acc.concat(plant.category),
+		[]
+	)
+
+	return (
+		<div className='lmj-shopping-list'>
+			<ul>
+				{categories.map((cat) => (
+					<li key={cat}>{cat}</li>
+				))}
+			</ul>
+			<ul className='lmj-plant-list'>
+				{plantList.map(({ id, cover, name, water, light, price }) => (<div key={id}>
+					<PlantItem
+						key={id}
+						cover={cover}
+						name={name}
+						water={water}
+						light={light}
+						price={price}
+					/>
+					<button onClick={() => updateCart(cart + 1)}>Ajouter</button>
+					</div>
+				))}
+			</ul>
+		</div>
+	)
 }
 
 export default ShoppingList
