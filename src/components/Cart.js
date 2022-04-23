@@ -10,15 +10,19 @@ function Cart({ cart, updateCart }) {
 
 	function removeFromCart(name, price) {
 		const plantToRemove = cart.find((plant) => plant.name === name)
-		const cartFilteredCurrentPlant = cart.filter(
-			(plant) => plant.name !== name
-		)//new array without plant
+		
 		if (plantToRemove && plantToRemove.amount > 1) { //if already in cart
+			const index = cart.indexOf(plantToRemove)
+			const updatedCart = [...cart];
+			console.log(updateCart)
+			updatedCart[index] = {name, price, amount : plantToRemove.amount -1}
 			updateCart([
-				...cartFilteredCurrentPlant, {name, price, amount : plantToRemove.amount -1}
+				...updatedCart, 
 			]) //combining array with (3 dots) spread operator  ,new qty = previous qty +1
 		} else {
-			updateCart([...cartFilteredCurrentPlant])
+			const cartRemovedPlant = cart.filter(
+			(plant) => plant.name !== name)//new array without plant
+			updateCart([...cartRemovedPlant])
 		}
 	}
 	
