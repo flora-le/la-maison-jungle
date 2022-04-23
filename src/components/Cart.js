@@ -25,7 +25,7 @@ function Cart({ cart, updateCart}) {
 			updateCart([...cartRemovedPlant])
 		}
 	}
-	useEffect(() => {
+	useEffect((total) => {
 			document.title = `LMJ: ${total}€ d'achats`
 		//alert(`J'aurai ${total}€ à payer 💸`)
 	}, [])
