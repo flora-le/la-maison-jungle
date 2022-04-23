@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/!%20https://flora-le.github.io/la-maison-jungle/static/css/main.35576e57.css",
+    "main.js": "/!%20https://flora-le.github.io/la-maison-jungle/static/js/main.94dc705a.js",
+    "static/js/787.82b65551.chunk.js": "/!%20https://flora-le.github.io/la-maison-jungle/static/js/787.82b65551.chunk.js",
+    "static/media/olivier.jpg": "/!%20https://flora-le.github.io/la-maison-jungle/static/media/olivier.b2908b40d9fb7f86626b.jpg",
+    "static/media/monstera.jpg": "/!%20https://flora-le.github.io/la-maison-jungle/static/media/monstera.6257bc6b1e699fa6dde1.jpg",
+    "static/media/basil.jpg": "/!%20https://flora-le.github.io/la-maison-jungle/static/media/basil.be00474e950eb5af0054.jpg",
+    "static/media/cactus.jpg": "/!%20https://flora-le.github.io/la-maison-jungle/static/media/cactus.a71c2062a926cb3d5db8.jpg",
+    "static/media/pothos.jpg": "/!%20https://flora-le.github.io/la-maison-jungle/static/media/pothos.d72dc0ac2f240d84c9d7.jpg",
+    "static/media/lyrata.jpg": "/!%20https://flora-le.github.io/la-maison-jungle/static/media/lyrata.2e915120c952bdb7066c.jpg",
+    "static/media/mint.jpg": "/!%20https://flora-le.github.io/la-maison-jungle/static/media/mint.b83a3d2e0c1c1cda808a.jpg",
+    "static/media/calathea.jpg": "/!%20https://flora-le.github.io/la-maison-jungle/static/media/calathea.455c33e2bd3e5509c907.jpg",
+    "static/media/succulent.jpg": "/!%20https://flora-le.github.io/la-maison-jungle/static/media/succulent.f4329849930298a9e46b.jpg",
+    "static/media/sun.svg": "/!%20https://flora-le.github.io/la-maison-jungle/static/media/sun.26fb5ace82c593ca64a695a4d42b0568.svg",
+    "static/media/water.svg": "/!%20https://flora-le.github.io/la-maison-jungle/static/media/water.cceb486fe1f26063bde712aa9fd7ea1e.svg",
+    "index.html": "/!%20https://flora-le.github.io/la-maison-jungle/index.html",
+    "main.35576e57.css.map": "/!%20https://flora-le.github.io/la-maison-jungle/static/css/main.35576e57.css.map",
+    "main.94dc705a.js.map": "/!%20https://flora-le.github.io/la-maison-jungle/static/js/main.94dc705a.js.map",
+    "787.82b65551.chunk.js.map": "/!%20https://flora-le.github.io/la-maison-jungle/static/js/787.82b65551.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.35576e57.css",
+    "static/js/main.94dc705a.js"
+  ]
+}
