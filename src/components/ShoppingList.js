@@ -5,7 +5,7 @@ import '../styles/ShoppingList.css'
 import { useState } from 'react'
 
 function ShoppingList({ cart, updateCart }) {
-	const [selectedCategory, updateSelectedCategory] = useState("")
+	const [selectedCategory, updateSelectedCategory] = useState("all")
 
 	const categories = plantList.reduce(
     (acc, plant) =>//accumulator + currentVal
