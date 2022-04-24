@@ -25,10 +25,10 @@ function Cart({ cart, updateCart}) {
 			updateCart([...cartRemovedPlant])
 		}
 	}
-	useEffect((total) => {
+	useEffect(() => {
 			document.title = `LMJ: ${total}€ d'achats`
 		//alert(`J'aurai ${total}€ à payer 💸`)
-	}, [])
+	}, [total])
 	
 	return isOpen ? (
 		<div className='lmj-cart'>
