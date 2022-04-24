@@ -14,7 +14,7 @@ function Cart({ cart, updateCart}) {
 		if (plantToRemove && plantToRemove.amount > 1) { //if already in cart
 			const index = cart.indexOf(plantToRemove)
 			const updatedCart = [...cart];
-			console.log(updateCart)
+			//console.log(updateCart)
 			updatedCart[index] = {name, price, amount : plantToRemove.amount -1}
 			updateCart([
 				...updatedCart, 
